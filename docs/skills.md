@@ -1,0 +1,8 @@
+# Skills usadas
+
+- `imagegen`: ferramenta integrada para nove imagens novas e uma edição de recorte do gato; prompts e arquivos finais documentados. Otimização/cortes geométricos preservam os originais.
+- `review-agent`: revisão final do diff, somente leitura, com checagem dos caminhos afetados e verificações relevantes. Não houve subagentes.
+- `skill-installer`: catálogo oficial consultado com `scripts/list-skills.py --format json`. Nenhuma instalação extra era necessária para o escopo; o usuário não indicou nome adicional a instalar.
+- `copy-lp-queiroz`: pacote ZIP local encontrado sem o sufixo `(1)`, lido sem executar arquivos. Os 15 blocos, frameworks e rubrica foram adaptados conforme a autorização e as limitações do briefing.
+
+O catálogo retornou: aspnet-core, chatgpt-apps, cli-creator, cloudflare-deploy, define-goal, figma, figma-code-connect-components, figma-create-design-system-rules, figma-create-new-file, figma-generate-design, figma-generate-library, figma-implement-design, figma-use, gh-address-comments, gh-fix-ci, hatch-pet, jupyter-notebook, linear, migrate-to-codex, netlify-deploy, notion-knowledge-capture, notion-meeting-intelligence, notion-research-documentation, notion-spec-to-implementation, openai-docs, pdf, playwright, playwright-interactive, render-deploy, screenshot, security-best-practices, security-ownership-map, security-threat-model, sentry, speech, transcribe, vercel-deploy, winui-app e yeet. A listagem marcou essas entradas como não instaladas no diretório de skills pessoais. Isso não implica ausência de versões de sistema já disponíveis na sessão.

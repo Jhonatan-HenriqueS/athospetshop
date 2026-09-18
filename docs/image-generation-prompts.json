@@ -1,0 +1,48 @@
+{
+  "mode": "Built-in image_gen",
+  "prompts": [
+    {
+      "name": "hero",
+      "prompt": "Use case: photorealistic-natural\nAsset type: transparent landing-page hero cutout for Athos pet shop.\nPrimary request: a beautiful happy golden retriever sitting upright next to a smaller domestic short-haired brown and gray tabby cat, matching premium pet-store editorial photography.\nSubject: dog on the left, cat on the right partially in front of dog's shoulder, both facing camera. Golden retriever mouth gently open, cheerful natural expression, rich golden fur. Alert tabby with green eyes.\nComposition/framing: isolated pair with full heads and bodies, lower legs can meet image bottom, tight composition, dog about 1.6 times cat height. Square canvas. No empty space above.\nLighting/mood: soft warm studio lighting, premium, affectionate, finely detailed realistic fur.\nConstraints: genuinely transparent alpha background. No background shapes, props, text, collar labels, logos, watermarks or extra animals. This is illustrative stock-style imagery, not a real clinic patient."
+    },
+    {
+      "name": "care",
+      "prompt": "Use case: product-mockup\nAsset type: pet shop category card image.\nPrimary request: a single elegant dark brown stethoscope loosely curved, pale sage studio background, no person.\nStyle: high-end photorealistic studio product photography. Square composition, complete objects centered in lower two thirds with balanced generous space. Soft diffused daylight, realistic materials and fine textures, subtle ground shadow. No text, labels, brand, logo, watermark, patterns, borders or decorative graphic. Category illustration only, no implied commercial product brand."
+    },
+    {
+      "name": "hygiene",
+      "prompt": "Use case: product-mockup\nAsset type: pet shop category card image.\nPrimary request: a cream unlabeled pet shampoo pump bottle beside a wooden grooming brush, warm pale sand studio background.\nStyle: high-end photorealistic studio product photography. Square composition, complete objects centered in lower two thirds with balanced generous space. Soft diffused daylight, realistic materials and fine textures, subtle ground shadow. No text, labels, brand, logo, watermark, patterns, borders or decorative graphic. Category illustration only, no implied commercial product brand."
+    },
+    {
+      "name": "toys",
+      "prompt": "Use case: product-mockup\nAsset type: pet shop category card image.\nPrimary request: a caramel orange rubber ball and a knotted beige and terracotta cotton dog rope toy, warm ochre studio background.\nStyle: high-end photorealistic studio product photography. Square composition, complete objects centered in lower two thirds with balanced generous space. Soft diffused daylight, realistic materials and fine textures, subtle ground shadow. No text, labels, brand, logo, watermark, patterns, borders or decorative graphic. Category illustration only, no implied commercial product brand."
+    },
+    {
+      "name": "bed",
+      "prompt": "Use case: product-mockup\nAsset type: pet shop category card image.\nPrimary request: a soft oatmeal beige oval dog bed with padded sides and a small taupe cushion, warm ivory studio background.\nStyle: high-end photorealistic studio product photography. Square composition, complete objects centered in lower two thirds with balanced generous space. Soft diffused daylight, realistic materials and fine textures, subtle ground shadow. No text, labels, brand, logo, watermark, patterns, borders or decorative graphic. Category illustration only, no implied commercial product brand."
+    },
+    {
+      "name": "dog-food",
+      "prompt": "Use case: product-mockup\nAsset type: premium pet shop website visual.\nPrimary request: a matte kraft brown bag of dog food, simple embossed paw motif without letters, next to a small cream ceramic bowl of dry kibble, pale ivory backdrop.\nStyle: photorealistic warm studio photography, soft diffused light, detailed natural textures. Square composition, complete subject with ample space, premium restrained styling. No text, brand, letters, logo, watermark or border. Illustrative image, no implied stock or real patient."
+    },
+    {
+      "name": "cat-food",
+      "prompt": "Use case: product-mockup\nAsset type: premium pet shop website visual.\nPrimary request: a muted sage green unbranded bag of cat food, next to a small shallow cream bowl of kibble, pale warm ivory backdrop.\nStyle: photorealistic warm studio photography, soft diffused light, detailed natural textures. Square composition, complete subject with ample space, premium restrained styling. No text, brand, letters, logo, watermark or border. Illustrative image, no implied stock or real patient."
+    },
+    {
+      "name": "bowls",
+      "prompt": "Use case: product-mockup\nAsset type: premium pet shop website visual.\nPrimary request: a terracotta ceramic pet drinking fountain with a small brass colored spout beside a cream ceramic feeding bowl, pale sand backdrop.\nStyle: photorealistic warm studio photography, soft diffused light, detailed natural textures. Square composition, complete subject with ample space, premium restrained styling. No text, brand, letters, logo, watermark or border. Illustrative image, no implied stock or real patient."
+    },
+    {
+      "name": "corgi",
+      "prompt": "Use case: photorealistic-natural\nAsset type: premium pet shop website visual.\nPrimary request: a happy pembroke welsh corgi sitting facing camera, tan and white coat, perked ears, cheerful open mouth, full body including paws, genuinely transparent alpha background.\nStyle: photorealistic warm studio photography, soft diffused light, detailed natural textures. Square composition, complete subject with ample space, premium restrained styling. No text, brand, letters, logo, watermark or border. Illustrative image, no implied stock or real patient."
+    },
+    {
+      "name": "cat-cleanup",
+      "intent": "edit",
+      "reference": "docs/references/gato-antes-do-recorte.webp",
+      "prompt": "Edit the supplied tabby cat image for the Athos pet shop website. Remove only the golden retriever fur visible along the entire left side and reconstruct the natural outline of this SAME cat, with fine natural fur and whiskers. Preserve the cat's green eyes, facial features, brown/black tabby markings, upright ears, photographic lighting, realistic anatomy and front-facing sitting pose. Deliver a clean photographic chest-up cat cutout on a genuinely transparent background, with fully visible ears and whiskers and a little transparent margin on both sides. No other animals, no background, no shadow rectangle, no text, no logo, no collar, no illustration style. The output will appear on cream and caramel website backgrounds.",
+      "output": "public/images/gato.webp"
+    }
+  ]
+}
