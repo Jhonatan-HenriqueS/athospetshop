@@ -8,6 +8,7 @@ export type Business = {
   instagramHandle: string;
   maps: string;
   secondaryMaps: string;
+  coordinates: { latitude: number; longitude: number };
   address: { street: string; neighborhood: string; city: string; state: string; country: string };
 };
 
@@ -21,6 +22,9 @@ export const business: Business = {
   instagramHandle: "@athoscentroveterinario",
   maps: "https://maps.app.goo.gl/2mTcRD3yX1iBPRYY6",
   secondaryMaps: "https://maps.app.goo.gl/jbJyAc5jz6oH6Sj37",
+  // Place marker (!3d/!4d), not the camera center (@), from both Maps links.
+  // Verified on 2026-09-23.
+  coordinates: { latitude: -10.8746245, longitude: -61.9629766 },
   address: {
     street: "Rua Monte Castelo, 452",
     neighborhood: "Jardim dos Migrantes",

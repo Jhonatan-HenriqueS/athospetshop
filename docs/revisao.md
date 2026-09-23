@@ -1,5 +1,7 @@
 # Revisão final
 
+> Atualização de 23/09/2026: a pedido do usuário, o mapa com fachada e chave Google foi substituído por Leaflet + OpenStreetMap, com carregamento ao chegar à seção e pin conferido nos dois links originais. A pendência de chave descrita neste registro anterior foi eliminada. Implementação atual e testes: [README — Mapa](../README.md#mapa).
+
 **No findings.**
 
 Revisão complementar em 18/09/2026: a auditoria do briefing identificou os quatro detalhes abaixo, que foram corrigidos antes desta conclusão.

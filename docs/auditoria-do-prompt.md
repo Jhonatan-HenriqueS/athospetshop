@@ -1,5 +1,7 @@
 # Auditoria do prompt — 18/09/2026
 
+> Atualização de 23/09/2026: a pedido do usuário, o mapa com fachada e chave Google foi substituído por Leaflet + OpenStreetMap, com carregamento ao chegar à seção e pin conferido nos dois links originais. A pendência de chave descrita neste registro anterior foi eliminada. Implementação atual e testes: [README — Mapa](../README.md#mapa).
+
 Fonte: `/home/jhonatan/Downloads/prompt-athos-codex-astra(1).md`. A conferência considera o briefing completo e a implementação efetiva, distinguindo código entregue de informações e ações externas ainda necessárias para publicar.
 
 ## Detalhes encontrados nesta conferência

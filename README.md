@@ -23,11 +23,12 @@ npm run lint
 npm run typecheck
 npm run test:seo
 npm run test:smoke
+npm run test:map
 ```
 
-O smoke test requer o site rodando e Google Chrome instalado. Usa Playwright e axe-core, confere 360, 390, 768, 1024 e 1440px, menu por teclado e em tela baixa, FAQ, reduced motion, conteúdo sem JavaScript, links, imagens, preview SEO e rotas. Não envia mensagens nem carrega mapas externos. Destino alternativo: `TEST_BASE_URL=http://localhost:3100 npm run test:smoke`. `PLAYWRIGHT_CHANNEL` permite selecionar outro canal instalado. Resultados e screenshots ficam em `docs/`.
+O smoke test requer o site rodando e Google Chrome instalado. Usa Playwright e axe-core, confere 360, 390, 768, 1024 e 1440px, menu por teclado e em tela baixa, FAQ, reduced motion, conteúdo sem JavaScript, links, imagens, preview SEO e rotas. Não envia mensagens; o mapa carrega ao se aproximar da seção de localização. Destino alternativo: `TEST_BASE_URL=http://localhost:3100 npm run test:smoke`. `PLAYWRIGHT_CHANNEL` permite selecionar outro canal instalado. Resultados e screenshots ficam em `docs/`.
 
-Os testes de SEO no navegador assumem a configuração inicial sem domínio e sem chave. As capturas verificam a aparência; a análise automática de acessibilidade não equivale a certificação integral. Metas de campo LCP ≤ 2,5s, INP ≤ 200ms e CLS ≤ 0,1 continuam a medir em produção; não foi alegada nota Lighthouse.
+Os testes de SEO no navegador assumem a configuração inicial sem domínio. As capturas verificam a aparência; a análise automática de acessibilidade não equivale a certificação integral. Metas de campo LCP ≤ 2,5s, INP ≤ 200ms e CLS ≤ 0,1 continuam a medir em produção; não foi alegada nota Lighthouse.
 
 ## Configuração de publicação
 
@@ -37,16 +38,18 @@ Copie `.env.example` para `.env.local` e preencha apenas dados reais:
 | --- | --- |
 | `SITE_URL` | Origem HTTPS real, sem caminho. Gera metadataBase, canonical por rota, URLs sociais e identidade canônica. Sem ela não há canonical ou domínio fictício. |
 | `SITE_INDEXABLE` | `true` somente quando produção estiver aprovada. Padrão `false`: páginas com noindex, rastreamento permitido e sitemap vazio. Previews Vercel mantêm noindex. |
-| `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_KEY` | Chave pública restrita da Maps Embed API. Ausente: foto, endereço e link externo permanecem funcionais. |
-| `NEXT_PUBLIC_GOOGLE_MAPS_PLACE_ID` | Place ID confirmado, opcional. Sem ele é usada consulta com nome e endereço completo. |
 
 Recrie o build após modificar variáveis: o conteúdo é pré-renderizado. Não configure domínio fictício, localhost, IP ou URL com caminho.
 
 ### Mapa
 
-A implementação usa `https://www.google.com/maps/embed/v1/place` somente após “Carregar mapa”. A chave é pública no navegador: habilite a Maps Embed API no projeto Google e restrinja a credencial à API e aos domínios HTTP referrers autorizados. Consulte a [documentação atual da Maps Embed API](https://developers.google.com/maps/documentation/embed/embedding-map) e os [pré-requisitos](https://developers.google.com/maps/documentation/embed/get-started) para configuração e condições da plataforma. Não foi assumida configuração de faturamento nem executada chamada com chave real.
+O mapa usa [Leaflet 1.9.4](https://leafletjs.com/examples/quick-start/) com imagens do OpenStreetMap, sem chave de API. Carrega ao se aproximar da seção, permite arrastar, zoom por botões ou gesto de pinça e voltar ao marcador da Athos. A roda do mouse continua rolando a página. O endereço e o botão de rota no Google Maps continuam disponíveis sem JavaScript ou em falha de rede.
 
-Antes de publicar, teste visualmente o pin com a chave e o domínio definitivos. Os dois links externos fornecidos foram abertos e conferidos no Chrome, mas isso não valida uma credencial de embed. O endereço permanece disponível sem JavaScript e sem conexão com o mapa.
+As coordenadas em `lib/business.ts` vêm do marcador dos dois links fornecidos, conferidos em 23/09/2026: **-10.8746245, -61.9629766**. Não são as coordenadas de câmera presentes após `@` na URL. As antigas variáveis `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_KEY` e `NEXT_PUBLIC_GOOGLE_MAPS_PLACE_ID` não são mais utilizadas.
+
+A atribuição permanece visível. As imagens são solicitadas diretamente pelo navegador, com cache padrão e sem download em massa, conforme a [política do OpenStreetMap](https://operations.osmfoundation.org/policies/tiles/). O serviço público não oferece SLA; ao aumentar o tráfego, reavalie o provedor de cartografia. A política de privacidade descreve o carregamento automático.
+
+`test:map` requer acesso à internet e o site rodando. Verifica cartografia real, posição do marcador, controles, adaptação de largura, acessibilidade, recuperação após falha de rede e alternativa sem JavaScript. As capturas ficam em `/tmp/athos-map-desktop.png` e `/tmp/athos-map-mobile.png`.
 
 ### Dados e privacidade
 
@@ -70,7 +73,7 @@ O hero usa `next/image` com preload; imagens inferiores usam lazy loading. Fonte
 ## Antes e depois da publicação
 
 1. Confirmar o WhatsApp contratado e alinhar contato com o Perfil da Empresa quando apropriado.
-2. Fornecer domínio, credencial de embed restrita e, se desejado, Place ID confirmado.
+2. Fornecer o domínio real e conferir o mapa na hospedagem definitiva.
 3. Revisar a política com identificação jurídica e provedor reais.
 4. Reconfirmar avaliações, autorização de uso dos materiais da empresa e disponibilidade dos serviços/produtos. Melhorar resolução de logo/fachada com arquivos originais.
 5. Receber e publicar horários oficiais; manter consulta por WhatsApp até lá.

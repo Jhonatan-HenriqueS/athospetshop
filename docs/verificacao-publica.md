@@ -1,5 +1,7 @@
 # Conferência pública — 17/09/2026
 
+> Atualização de 23/09/2026: a pedido do usuário, o mapa com fachada e chave Google foi substituído por Leaflet + OpenStreetMap, com carregamento ao chegar à seção e pin conferido nos dois links originais. A pendência de chave descrita neste registro anterior foi eliminada. Implementação atual e testes: [README — Mapa](../README.md#mapa).
+
 A tentativa inicial via ferramenta de navegação falhou nos links curtos e foi limitada no Instagram. A segunda tentativa via navegador Chrome/Playwright conseguiu abrir o Google Maps. Portanto, a limitação inicial do briefing não foi tratada como uma verificação concluída.
 
 Os dois links fornecidos redirecionaram para a mesma entidade **Athos Centro Veterinário**:

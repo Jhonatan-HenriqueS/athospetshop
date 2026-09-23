@@ -3,6 +3,7 @@ import { Manrope, Caveat } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { pageMetadata } from "@/lib/seo";
+import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
 const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"], display: "swap" });

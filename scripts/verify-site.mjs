@@ -98,7 +98,7 @@ try {
       assert.equal(await page.locator('iframe').count(), 0);
       assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), 'noindex, follow');
       assert.equal(await page.locator('link[rel="canonical"]').count(), 0);
-      report.checks.push(`${links.length} WhatsApp links validated; six contextual categories; JSON-LD; no map requests before action; safe preview SEO`);
+      report.checks.push(`${links.length} WhatsApp links validated; six contextual categories; JSON-LD; Leaflet map without iframe; safe preview SEO`);
     }
     await context.close();
   }

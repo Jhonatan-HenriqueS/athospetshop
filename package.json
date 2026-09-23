@@ -9,6 +9,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test:smoke": "node scripts/verify-site.mjs",
+    "test:map": "node scripts/verify-map.mjs",
     "test:seo": "node scripts/verify-seo.mjs"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "class-variance-authority": "^0.7.1",
     "cn": "^0.3.0",
     "gsap": "^3.15.0",
+    "leaflet": "^1.9.4",
     "lucide-react": "^1.47.0",
     "next": "16.3.5",
     "radix-ui": "^1.6.7",
@@ -28,6 +30,7 @@
     "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
+    "@types/leaflet": "^1.9.22",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

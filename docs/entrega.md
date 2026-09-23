@@ -1,5 +1,7 @@
 # Entrega — Athos
 
+> Atualização de 23/09/2026: a pedido do usuário, o mapa com fachada e chave Google foi substituído por Leaflet + OpenStreetMap, com carregamento ao chegar à seção e pin conferido nos dois links originais. A pendência de chave descrita neste registro anterior foi eliminada. Implementação atual e testes: [README — Mapa](../README.md#mapa).
+
 Entrega inicial em 17/09/2026, com auditoria complementar em 18/09/2026. Implementação local concluída no projeto existente, sem publicação ou alterações em contas externas.
 
 ## O que foi entregue

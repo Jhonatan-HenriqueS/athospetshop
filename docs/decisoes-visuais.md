@@ -1,5 +1,7 @@
 # Direção de arte e decisões
 
+> Atualização de 23/09/2026: a pedido do usuário, o mapa com fachada e chave Google foi substituído por Leaflet + OpenStreetMap, com carregamento ao chegar à seção e pin conferido nos dois links originais. A pendência de chave descrita neste registro anterior foi eliminada. Implementação atual e testes: [README — Mapa](../README.md#mapa).
+
 A referência principal é `references/attachment-10.png` (Erudites vertical). O anexo 09, em dois painéis, complementa os detalhes. Os dez anexos foram abertos individualmente; o anexo 07 repete o 06. A foto de interior mencionada no briefing não veio entre os dez anexos efetivamente recebidos.
 
 A página preserva header horizontal, hero 44%/56% com texto à esquerda, golden retriever e gato à direita, formas orgânicas caramelo, quatro benefícios, seis categorias, banner com pet à esquerda, cinco produtos no desktop, institucional com imagem à esquerda, três avaliações, faixa final e quatro grupos de rodapé. FAQ e localização entram entre as avaliações e a faixa final, conforme o briefing.
