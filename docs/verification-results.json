@@ -1,5 +1,6 @@
 {
-  "baseURL": "http://localhost:3000",
+  "checkedAt": "2026-10-05T03:42:08.591Z",
+  "baseURL": "http://localhost:3100",
   "viewports": [
     {
       "width": 360,
@@ -54,23 +55,10 @@
   ],
   "errors": [],
   "checks": [
-    "Mobile Sheet: short viewport, full-width CTA, automated accessibility, keyboard, Escape, focus restore, anchor close; FAQ: keyboard expand/collapse",
+    "Mobile Sheet: short viewport, full-width CTA, automated accessibility, keyboard, touch, Escape, focus restore, anchor close; FAQ: keyboard expand/collapse",
     "Footer back-to-top returns to document start",
-    "22 WhatsApp links validated; six contextual categories; JSON-LD; no map requests before action; safe preview SEO",
-    "GSAP section entrance completes; changing reduced motion clears transforms",
+    "22 WhatsApp links validated; six contextual categories; JSON-LD; Leaflet map without iframe; safe preview SEO",
+    "GSAP cards enter in sequence; section entrance completes; reduced motion clears transforms and disables hover movement/zoom",
     "Eight SSR FAQ answers readable without JavaScript; privacy route; real 404; robots and empty preview sitemap"
-  ],
-  "assetRefresh": {
-    "date": "2026-09-17",
-    "script": "node scripts/capture-preview.mjs",
-    "widths": [
-      360,
-      390,
-      768,
-      1024,
-      1440
-    ],
-    "brokenImages": 0,
-    "horizontalOverflow": false
-  }
+  ]
 }

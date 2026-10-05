@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { WhatsAppButton } from "@/components/shared/whatsapp-button";
 import { categories, products } from "@/lib/content";
 import { categoryMessage, whatsappLink } from "@/lib/business";
+import { CareCollections } from "@/components/sections/care-collections";
 
 export function Categories() {
   return (
@@ -175,6 +176,7 @@ export function Showcase() {
         Imagens ilustrativas das categorias. Consulte a disponibilidade e
         planeje sua visita.
       </p>
+      <CareCollections />
     </section>
   );
 }

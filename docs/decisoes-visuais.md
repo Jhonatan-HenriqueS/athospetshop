@@ -30,3 +30,15 @@ Os textos de leitura usam 14–16px, com microcopy de 12px nas áreas de consult
 ## Comparação
 
 Os screenshots de verificação ficam em `docs/screenshots/athos-{largura}.png`. Compare a ordem, os alinhamentos e o hero com `references/attachment-10.png`; não compare a altura total diretamente, porque foram acrescentados FAQ, localização e CTAs maiores, além da copy em português.
+
+## Escala responsiva — 04/10/2026
+
+A solicitação posterior de uma página mais ampla substitui as medidas compactas descritas acima. O conteúdo agora tem largura máxima de 1440px, espaçamento vertical de 72–128px, títulos de seção de 32–52px e textos principais de 17–20px. Os botões de conteúdo têm altura mínima de 56px.
+
+Categorias usam três colunas no desktop, duas no tablet e cards horizontais individuais nos celulares estreitos. A vitrine apresenta três cards por linha no desktop, dois no tablet e um no celular; a última linha fica centralizada. Institucional, avaliações, FAQ, localização, banners e rodapé acompanham a escala maior. O mapa interativo foi preservado.
+
+Na conclusão, o botão de contato final passou a ocupar a largura disponível no celular, sem a antiga limitação de 220px. A área da imagem do corgi ganhou altura para preservar a cabeça no recorte mobile. O `sizes` da imagem do CTA final acompanha suas dimensões de exibição.
+
+A revisão de geometria cobriu 17 larguras entre 320 e 2560px, sem rolagem horizontal, botões cortados ou sobreposição entre marca, navegação e ações do cabeçalho. A altura inicial continua usando a altura dinâmica da janela como mínimo; telas pequenas permitem rolagem sem comprimir o conteúdo.
+
+Validação final: `npm run build`, `npm run lint`, `npm run typecheck`, `test:smoke` e `test:map` passaram. As suítes de navegador foram executadas contra o build de produção local. O relatório e as capturas atualizados estão em `docs/verification-results.json` e `docs/screenshots/`.
