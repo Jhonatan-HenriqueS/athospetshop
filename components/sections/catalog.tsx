@@ -41,7 +41,7 @@ export function Categories() {
             >
               <div className="category-image">
                 <Image
-                  src={`/images/${category.image}.webp`}
+                  src={`/images/Iphone/${category.image}.jpeg`}
                   alt=""
                   width={480}
                   height={480}
