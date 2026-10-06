@@ -2,9 +2,8 @@ import Image from "next/image";
 import { ArrowRight, PawPrint } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { WhatsAppButton } from "@/components/shared/whatsapp-button";
-import { categories, products } from "@/lib/content";
+import { categories } from "@/lib/content";
 import { categoryMessage, whatsappLink } from "@/lib/business";
-import { CareCollections } from "@/components/sections/care-collections";
 
 export function Categories() {
   return (
@@ -22,7 +21,7 @@ export function Categories() {
             Explore as categorias e consulte as opções disponíveis na Athos.
           </p>
         </div>
-        <a className="text-link" href="#vitrine">
+        <a className="text-link" href="#cuidados-bem-estar">
           Explorar opções
           <ArrowRight size={17} aria-hidden="true" />
         </a>
@@ -46,7 +45,7 @@ export function Categories() {
                   alt=""
                   width={480}
                   height={480}
-                  sizes="(max-width: 540px) 42vw, (max-width: 1000px) 46vw, (max-width: 1550px) 30vw, 460px"
+                  sizes="(max-width: 540px) 92vw, (max-width: 1000px) 46vw, (max-width: 1550px) 30vw, 460px"
                 />
               </div>
               <div className="category-info">
@@ -66,7 +65,7 @@ export function Categories() {
 export function CareBanner() {
   return (
     <section
-      className="content-container"
+      className="content-container care-banner-section"
       aria-labelledby="care-banner-title"
       data-reveal
     >
@@ -113,70 +112,6 @@ export function CareBanner() {
           <PawPrint />
         </div>
       </div>
-    </section>
-  );
-}
-
-export function Showcase() {
-  return (
-    <section
-      className="section-space content-container"
-      id="vitrine"
-      aria-labelledby="showcase-title"
-      data-reveal
-    >
-      <div className="section-heading">
-        <div>
-          <p className="eyebrow">Uma rotina cheia de carinho</p>
-          <h2 id="showcase-title">Boas escolhas para o dia a dia.</h2>
-          <p>
-            Conheça algumas categorias e confirme modelos, tamanhos e
-            disponibilidade pelo WhatsApp.
-          </p>
-        </div>
-        <a
-          className="text-link"
-          href={whatsappLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Falar com a equipe
-          <ArrowRight size={17} aria-hidden="true" />
-        </a>
-      </div>
-      <div className="product-grid">
-        {products.map((product) => (
-          <Card className="product-card" key={product.title} data-reveal-card>
-            <div className="product-image">
-              <Image
-                src={`/images/${product.image}.webp`}
-                alt={`Imagem ilustrativa: ${product.title.toLowerCase()}`}
-                width={600}
-                height={600}
-                sizes="(max-width: 540px) 92vw, (max-width: 1000px) 46vw, (max-width: 1550px) 30vw, 460px"
-              />
-            </div>
-            <div className="product-info">
-              <p className="product-tag">{product.tag}</p>
-              <h3>{product.title}</h3>
-              <p>{product.description}</p>
-              <WhatsAppButton
-                className="product-button"
-                message={categoryMessage(product.title)}
-                icon={false}
-                label={`Consultar disponibilidade: ${product.title.toLowerCase()}`}
-              >
-                Consultar disponibilidade
-              </WhatsAppButton>
-            </div>
-          </Card>
-        ))}
-      </div>
-      <p className="image-disclaimer hidden">
-        Imagens ilustrativas das categorias. Consulte a disponibilidade e
-        planeje sua visita.
-      </p>
-      <CareCollections />
     </section>
   );
 }

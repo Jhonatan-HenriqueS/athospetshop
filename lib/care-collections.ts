@@ -1,45 +1,27 @@
-type CareCollection = {
-  id: string;
-  title: string;
-  description: string;
-  tone: "sand" | "sage" | "peach";
-  images: readonly [string, string, string];
-};
-
-// JPEGs provisórios já existentes no projeto. Troque cada caminho pela foto final.
-// A ordem das imagens corresponde aos três espaços de cada card.
+// Fotos fornecidas da seleção de produtos de cada categoria.
 export const careCollections = [
-  {
-    id: "vermifugos",
-    title: "Vermífugos",
-    description: "Cuidado contra vermes para mais bem-estar em cada fase.",
-    tone: "sand",
-    images: [
-      "/images/Iphone/medicacao4.jpeg",
-      "/images/Iphone/medicacao5.jpeg",
-      "/images/Iphone/medicacao6.jpeg",
-    ],
-  },
   {
     id: "carrapaticidas",
     title: "Carrapaticidas",
-    description: "Controle de carrapatos para mais conforto no dia a dia.",
-    tone: "sage",
-    images: [
-      "/images/Iphone/medicacao1.jpeg",
-      "/images/Iphone/medicacao2.jpeg",
-      "/images/Iphone/medicacao3.jpeg",
-    ],
+    tag: "Proteção",
+    description: "Proteção contra carrapatos para uma rotina mais tranquila.",
+    image: "/images/Iphone/Carrapaticidas.png",
+    alt: "Bravecto, Credeli e Simparic sobre o balcão da Athos",
+  },
+  {
+    id: "vermifugos",
+    title: "Vermífugos",
+    tag: "Cuidado",
+    description: "Cuidado contra vermes para mais bem-estar em cada fase.",
+    image: "/images/Iphone/Vermifugos.png",
+    alt: "Top Dog, Vetmax Plus e Drontal Puppy sobre o balcão da Athos",
   },
   {
     id: "suplementos",
     title: "Suplementos",
+    tag: "Bem-estar",
     description: "Vitaminas e apoio nutricional para complementar o cuidado com seu pet.",
-    tone: "peach",
-    images: [
-      "/images/Iphone/medicacao7.jpeg",
-      "/images/Iphone/medicacao8.jpeg",
-      "/images/Iphone/medicacao9.jpeg",
-    ],
+    image: "/images/Iphone/Suplementos.png",
+    alt: "Pelo & Derme, Hepvet e Glicopan Gold sobre o balcão da Athos",
   },
-] as const satisfies readonly CareCollection[];
+] as const;
