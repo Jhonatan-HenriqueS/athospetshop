@@ -23,7 +23,7 @@ export function About() {
       data-reveal
     >
       <div className="content-container about-grid">
-        <div className="about-art">
+        <div className="about-art" data-reveal-direction="left">
           <div className="about-blob" aria-hidden="true" />
           <div className="shop-photo">
             <Image
@@ -56,7 +56,7 @@ export function About() {
             <Heart size={24} />
           </p>
         </div>
-        <div className="about-copy">
+        <div className="about-copy" data-reveal-direction="right">
           <p className="eyebrow">Conheça a Athos</p>
           <h2 id="about-title">
             Mais perto de você

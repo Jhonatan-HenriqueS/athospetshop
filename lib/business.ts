@@ -9,7 +9,13 @@ export type Business = {
   maps: string;
   secondaryMaps: string;
   coordinates: { latitude: number; longitude: number };
-  address: { street: string; neighborhood: string; city: string; state: string; country: string };
+  address: {
+    street: string;
+    neighborhood: string;
+    city: string;
+    state: string;
+    country: string;
+  };
 };
 
 export const business: Business = {
@@ -44,7 +50,8 @@ export const navigation = [
   { label: "Como chegar", href: "/#localizacao" },
 ];
 
-export const defaultMessage = "Olá! Encontrei a Athos pelo site e gostaria de informações sobre produtos e atendimento.";
+export const defaultMessage =
+  "Olá! Encontrei a Athos pelo site e gostaria de informações sobre produtos e atendimento.";
 
 export function whatsappLink(message = defaultMessage) {
   return `${business.whatsapp}?text=${encodeURIComponent(message)}`;
@@ -53,3 +60,9 @@ export function whatsappLink(message = defaultMessage) {
 export function categoryMessage(category: string) {
   return `Olá! Encontrei a Athos pelo site e gostaria de consultar opções e disponibilidade de ${category.toLocaleLowerCase("pt-BR")}.`;
 }
+
+export const openingHours = [
+  "Segunda a sexta: 7h às 18h30",
+  "Sábado: 7h às 13h",
+  "Domingo: fechado",
+] as const;

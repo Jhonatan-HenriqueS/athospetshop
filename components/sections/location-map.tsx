@@ -106,7 +106,7 @@ export function LocationMap() {
   }, [attempt]);
 
   return (
-    <div className="location-map">
+    <div className="location-map" data-reveal-direction="right">
       <div
         ref={container}
         className="location-map-canvas"

@@ -1435,14 +1435,24 @@
 .location-hours {
   display: flex;
   gap: 13px;
-  align-items: center;
+  align-items: flex-start;
   color: var(--muted-foreground);
   font-size: 15px;
   min-height: 52px;
 }
 .location-hours svg {
   flex-shrink: 0;
+  margin-top: 3px;
   color: var(--primary);
+}
+.location-hours strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--foreground);
+}
+.location-hours p {
+  margin: 0;
+  line-height: 1.8;
 }
 .location-actions {
   display: flex;
@@ -1460,7 +1470,11 @@
   position: relative;
   isolation: isolate;
   min-width: 0;
-  border: 1px solid #d8c7b6;
+  border: 0;
+  box-shadow:
+    0 2px 5px rgb(0 0 0 / 6%),
+    0 10px 24px rgb(0 0 0 / 9%),
+    0 24px 48px -16px rgb(0 0 0 / 16%);
   overflow: hidden;
   background: var(--surface-warm);
   height: clamp(420px, 38vw, 580px);
@@ -2850,9 +2864,13 @@
   .care-collections-description {
     font-size: 17px;
     line-height: 1.5;
+    margin-bottom: 50px;
   }
   .care-collections {
-    max-width: min(100%, max(900px, calc((100svh - var(--header-height) - 390px) * 4)));
+    max-width: min(
+      100%,
+      max(900px, calc((100svh - var(--header-height) - 390px) * 4))
+    );
     margin-inline: auto;
   }
   .care-collections-copy .eyebrow {

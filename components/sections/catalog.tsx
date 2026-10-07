@@ -27,11 +27,12 @@ export function Categories() {
         </a>
       </div>
       <div className="category-grid">
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <Card
             className={`category-card tone-${category.tone}`}
             key={category.title}
             data-reveal-card
+            data-reveal-direction={index % 2 === 0 ? "left" : "right"}
           >
             <a
               href={whatsappLink(categoryMessage(category.title))}

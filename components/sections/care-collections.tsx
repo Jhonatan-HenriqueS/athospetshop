@@ -1,20 +1,11 @@
 import Image from "next/image";
 import {
   ArrowRight,
-  BugOff,
   Heart,
-  Leaf,
   PawPrint,
-  ShieldCheck,
 } from "lucide-react";
 import { WhatsAppButton } from "@/components/shared/whatsapp-button";
 import { careCollections } from "@/lib/care-collections";
-
-const icons = {
-  vermifugos: ShieldCheck,
-  carrapaticidas: BugOff,
-  suplementos: Leaf,
-};
 
 export function CareCollections() {
   return (
@@ -50,7 +41,6 @@ export function CareCollections() {
       </header>
       <div className="care-collections-grid">
         {careCollections.map((collection) => {
-          const Icon = icons[collection.id];
           return (
             <article
               id={collection.id}

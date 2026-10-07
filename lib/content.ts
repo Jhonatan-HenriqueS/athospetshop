@@ -1,4 +1,4 @@
-import { business } from "@/lib/business";
+import { business, openingHours } from "@/lib/business";
 
 export const categories = [
   {
@@ -11,6 +11,21 @@ export const categories = [
   { title: "Higiene e cuidados", image: "Shampoos", tone: "sand" },
   { title: "Brinquedos e acessórios", image: "brinquedo", tone: "gold" },
   { title: "Conforto e bem-estar", image: "confortos", tone: "cream" },
+  {
+    title: "Mochilinhas para pets",
+    image: "WhatsApp Image 2026-10-04 at 10.07.01 PM",
+    tone: "rose",
+  },
+  {
+    title: "Casinhas para pets",
+    image: "WhatsApp Image 2026-10-04 at 10.07.10 PM",
+    tone: "sand",
+  },
+  {
+    title: "Bebedouros para pets",
+    image: "WhatsApp Image 2026-10-04 at 10.07.04 PM (3)",
+    tone: "sage",
+  },
 ] as const;
 
 export const products = [
@@ -78,7 +93,7 @@ export const faqs = [
   {
     question: "Qual é o horário de funcionamento?",
     answer:
-      "Consulte os horários atualizados pelo WhatsApp antes de se deslocar.",
+      openingHours.join(". ") + ".",
   },
   {
     question: "Onde acompanho as novidades da Athos?",
