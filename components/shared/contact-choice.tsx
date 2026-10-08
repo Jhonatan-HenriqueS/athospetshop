@@ -35,7 +35,7 @@ export function ContactChoice({ children }: { children: ReactElement }) {
                 </span>
                 <h3>Pet Shop</h3>
               </div>
-              <p className="contact-choice-phone">(69) 99222-2466</p>
+              <p className="contact-choice-phone">(69) 99290-0750</p>
               <p>
                 Fale com a equipe e descubra produtos, opções e disponibilidade.
               </p>
@@ -59,7 +59,7 @@ export function ContactChoice({ children }: { children: ReactElement }) {
                 </span>
                 <h3>Clínica Veterinária</h3>
               </div>
-              <p className="contact-choice-phone">(69) 99290-0750</p>
+              <p className="contact-choice-phone">(69) 99222-2466</p>
               <p>Fale com a clínica e encontre um horário para a consulta.</p>
               <Button asChild className="athos-button contact-choice-action">
                 <a
