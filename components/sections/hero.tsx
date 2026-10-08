@@ -33,7 +33,7 @@ export function Hero() {
               para cuidar do seu pet em Ji-Paraná.
             </p>
             <div className="hero-actions">
-              <WhatsAppButton />
+              <WhatsAppButton chooseContact />
               <Button
                 asChild
                 variant="outline"

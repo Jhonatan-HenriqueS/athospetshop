@@ -1,3 +1,4 @@
+import { OpeningStatus } from "@/components/shared/opening-status";
 import { ArrowUpRight, Clock3, MapPin } from "lucide-react";
 import { business, openingHours } from "@/lib/business";
 import { Button } from "@/components/ui/button";
@@ -35,6 +36,7 @@ export function Location() {
             {openingHours.map((hours) => (
               <p key={hours}>{hours}</p>
             ))}
+            <OpeningStatus />
           </div>
         </div>
         <div className="location-actions">
@@ -44,7 +46,7 @@ export function Location() {
               <ArrowUpRight size={17} aria-hidden="true" />
             </a>
           </Button>
-          <WhatsAppButton variant="outline" className="secondary-button" />
+          <WhatsAppButton chooseContact variant="outline" className="secondary-button" />
         </div>
       </div>
       <LocationMap />

@@ -42,7 +42,7 @@ export function Categories() {
             >
               <div className="category-image">
                 <Image
-                  src={`/images/Iphone/${category.image}.jpeg`}
+                  src={`/images/Novas/${category.image}.png`}
                   alt=""
                   width={480}
                   height={480}
@@ -88,7 +88,7 @@ export function CareBanner() {
             Alimentação, diversão e conforto para os momentos que vocês
             compartilham.
           </p>
-          <WhatsAppButton
+          <WhatsAppButton chooseContact
             message="Olá! Gostaria de consultar opções de alimentação, diversão e conforto para meu pet."
             icon={false}
           >

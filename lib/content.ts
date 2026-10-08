@@ -3,27 +3,27 @@ import { business, openingHours } from "@/lib/business";
 export const categories = [
   {
     title: "Alimentação para cães",
-    image: "cachorro-alimentacao",
+    image: "Imagem do ChatGPT 7 de out. de 2026, 12_35_29-6",
     tone: "peach",
   },
-  { title: "Alimentação para gatos", image: "gato-alimentacao", tone: "rose" },
-  { title: "Cuidado veterinário", image: "grupo-remedios", tone: "sage" },
-  { title: "Higiene e cuidados", image: "Shampoos", tone: "sand" },
-  { title: "Brinquedos e acessórios", image: "brinquedo", tone: "gold" },
-  { title: "Conforto e bem-estar", image: "confortos", tone: "cream" },
+  { title: "Alimentação para gatos", image: "Imagem do ChatGPT 7 de out. de 2026, 12_35_26-4", tone: "rose" },
+  { title: "Cuidado veterinário", image: "Imagem do ChatGPT 7 de out. de 2026, 12_35_25-3", tone: "sage" },
+  { title: "Higiene e cuidados", image: "Imagem do ChatGPT 7 de out. de 2026, 12_35_23-2", tone: "sand" },
+  { title: "Brinquedos e acessórios", image: "Imagem do ChatGPT 7 de out. de 2026, 12_35_22-1", tone: "gold" },
+  { title: "Conforto e bem-estar", image: "Imagem do ChatGPT 7 de out. de 2026, 12_35_27-5", tone: "cream" },
   {
     title: "Mochilinhas para pets",
-    image: "WhatsApp Image 2026-10-04 at 10.07.01 PM",
+    image: "Imagem do ChatGPT 7 de out. de 2026, 12_35_31-9",
     tone: "rose",
   },
   {
     title: "Casinhas para pets",
-    image: "WhatsApp Image 2026-10-04 at 10.07.10 PM",
+    image: "Imagem do ChatGPT 7 de out. de 2026, 12_35_30-7",
     tone: "sand",
   },
   {
     title: "Bebedouros para pets",
-    image: "WhatsApp Image 2026-10-04 at 10.07.04 PM (3)",
+    image: "Imagem do ChatGPT 7 de out. de 2026, 12_35_31-8",
     tone: "sage",
   },
 ] as const;
