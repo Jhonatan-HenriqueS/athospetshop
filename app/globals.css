@@ -1702,6 +1702,10 @@
   display: block;
   margin-bottom: 11px;
 }
+.footer-brand {
+  width: fit-content;
+  max-width: 100%;
+}
 .footer-brand > p {
   color: var(--muted-foreground);
   font-size: 16px;
@@ -1711,6 +1715,10 @@
   display: flex;
   gap: 8px;
   margin-top: 15px;
+}
+.site-footer .footer-brand .social-links {
+  justify-content: center;
+  align-items: center;
 }
 .social-links a {
   display: flex;
@@ -1722,6 +1730,11 @@
 .social-links svg {
   width: 22px;
   height: 22px;
+}
+.site-footer .social-links .footer-social-logo {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
 }
 .footer-contact {
   display: flex;
